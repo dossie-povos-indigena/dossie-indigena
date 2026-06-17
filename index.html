@@ -152,6 +152,38 @@ header{
     margin: 0;
 
 }
+    @media (max-width: 768px) {
+
+  .hero,
+  .capa {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .hero img,
+  .capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .titulo,
+  .texto-capa {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    width: auto;
+  }
+
+  .projeto,
+  .escola,
+  .logo {
+    display: none;
+  }
+
+}
 </style>
 </head>
 <body>
