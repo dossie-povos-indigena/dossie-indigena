@@ -17,15 +17,56 @@ body{
 background:#f4f1e8;
 color:#222;
 }
+.barra-topo{
+    position:fixed;
+    top:0;
+    left:0;
 
+    width:100%;
+    height:80px;
+
+    background:#ffffff;
+    border-bottom:4px solid #1f3a5f;
+
+    display:flex;
+    align-items:center;
+
+    z-index:999;
+}
+
+.titulo-topo{
+    margin-left:80px;
+    flex:1;
+}
+
+.titulo-topo h1{
+    margin:0;
+    font-size:2rem;
+    color:#1f3a5f;
+}
+
+.titulo-topo p{
+    margin-top:5px;
+    font-size:0.9rem;
+    color:#666;
+}
+
+.logo-escola{
+    height:55px;
+    margin-right:20px;
+}
 header{
-height:100vh;
-background:url('https://i.ibb.co/sdcdQGDX/file-000000002b3c720e97971a790eff3560.png=80') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
+    height:100vh;
+    padding-top:80px;
+
+    background:url('') center/cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
 }
 
 .capa{
@@ -188,7 +229,16 @@ header{
 </style>
 </head>
 <body>
+<div class="barra-topo">
 
+    <div class="titulo-topo">
+        <h1>Dossiê dos Povos Indígenas</h1>
+        <p>Projeto Colégio São Francisco de Assis</p>
+    </div>
+
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kbS85k6ZmDGdGmTYvuNBTjTk3zJyIF6S7O48cn3DhUgCI=s900-c-k-c0x00ffffff-no-rj" alt="Logo da escola" class="logo-escola">
+
+</div>
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <nav class="menu" id="menu">
