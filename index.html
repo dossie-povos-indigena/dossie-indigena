@@ -1,330 +1,464 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dossiê dos Povos Indígenas</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f4f1e8;
-color:#222;
+    background:#f4f1e8;
+    color:#222;
 }
+
+/* ===========================
+   BARRA SUPERIOR
+=========================== */
+
 .barra-topo{
+
     position:fixed;
+
     top:0;
     left:0;
 
     width:100%;
+
     height:80px;
 
-    background:#ffffff;
+    background:white;
+
     border-bottom:4px solid #1f3a5f;
 
     display:flex;
+
     align-items:center;
 
-    z-index:999;
-}
+    justify-content:space-between;
 
-.titulo-topo{
-    margin-left:80px;
-    flex:1;
+    padding:0 25px;
+
+    z-index:1000;
+
 }
 
 .titulo-topo h1{
-    margin:0;
-    font-size:2rem;
+
     color:#1f3a5f;
+
+    font-size:2rem;
+
 }
 
 .titulo-topo p{
-    margin-top:5px;
-    font-size:0.9rem;
+
     color:#666;
+
+    margin-top:5px;
+
+    font-size:.9rem;
+
 }
 
 .logo-escola{
+
     height:55px;
-    margin-right:20px;
-}
-header{
-    height:100vh;
-    padding-top:0;
 
-    background: 
-    url('https://i.ibb.co/fVThCFj8/file-000000007ed4720e9f9f3602dc34a3d6.png') center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-    color:white;
 }
 
-.capa{
-background:rgba(0,0,0,0.6);
-padding:30px;
-border-radius:10px;
-}
-
-.capa h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-.capa p{
-font-size:1.2rem;
-}
+/* ===========================
+MENU
+=========================== */
 
 .menu-btn{
-position:fixed;
-top:15px;
-left:15px;
-font-size:30;
-background:#2f4f2f;
-color:white;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-border-radius:5px;
-z-index:1000;
+
+    position:fixed;
+
+    left:15px;
+
+    top:15px;
+
+    background:#2f4f2f;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    font-size:28px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    z-index:2000;
+
 }
 
 .menu{
-position:fixed;
-left:-260px;
-top:20px;
-width:250px;
-height:100%;
-background:#1f3a1f;
-padding-top:60px;
-transition:0.3s;
-z-index:999;
-}
 
-.menu a{
-display:block;
-padding:15px;
-color:white;
-text-decoration:none;
-font-size:18px;
-}
+    position:fixed;
 
-.menu a:hover{
-background:#3d5a3d;
+    top:0;
+
+    left:-260px;
+
+    width:250px;
+
+    height:100%;
+
+    background:#1f3a1f;
+
+    transition:.4s;
+
+    padding-top:90px;
+
+    z-index:1500;
+
 }
 
 .menu.active{
-left:0;
+
+    left:0;
+
 }
 
+.menu a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 22px;
+
+    font-size:18px;
+
+}
+
+.menu a:hover{
+
+    background:#315331;
+
+}
+
+/* ===========================
+CAPA
+=========================== */
+
+header{
+
+    min-height:100vh;
+
+    padding-top:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    background-image:url("https://i.ibb.co/fVThCFj8/file-000000007ed4720e9f9f3602dc34a3d6.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+}
+
+.capa{
+
+    background:rgba(0,0,0,.55);
+
+    padding:45px;
+
+    border-radius:18px;
+
+    width:90%;
+
+    max-width:820px;
+
+}
+
+.capa h1{
+
+    font-size:3.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.capa p{
+
+    font-size:1.3rem;
+
+    line-height:1.7;
+
+}
+
+.btn-explorar{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:#8b5e3c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 45px;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.btn-explorar:hover{
+
+    background:#a06b45;
+
+}
+
+/* ===========================
+SEÇÕES
+=========================== */
+
 section{
-padding:60px 10%;
+
+    padding:70px 10%;
+
 }
 
 h2{
-color:#1f4d1f;
-margin-bottom:20px;
+
+    color:#1f4d1f;
+
+    margin-bottom:25px;
+
 }
 
 p{
-line-height:1.8;
-margin-bottom:15px;
-}
 
-.galeria{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:30px;
-}
+    line-height:1.8;
 
-.galeria img{
-width:300px;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+    margin-bottom:18px;
+
 }
 
 .info-box{
-background:white;
-padding:20px;
-border-left:6px solid #2f4f2f;
-margin:20px 0;
-border-radius:5px;
+
+    background:white;
+
+    border-left:6px solid #2f4f2f;
+
+    padding:22px;
+
+    border-radius:8px;
+
+    margin:25px 0;
+
+}
+
+.galeria{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.galeria img{
+
+    width:300px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.25);
+
 }
 
 footer{
-background:#181818;
-color:white;
-text-align:center;
-padding:20px;
-}
-    .logo-direita{
-    position:absolute;
-    top:20px;
-    left:100px;
+
+    background:#181818;
+
     color:white;
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:6px;
-    line-height:1.8;
-    text-align:left;
-    z-index:100;
-}
 
-header{
-    position:relative;
-}
-.linha-dossie{
-    height: 6px;
-    background: #1f3772;
-    border: none;
-    margin: 0;
+    text-align:center;
+
+    padding:25px;
 
 }
-    @media (max-width: 768px) {
+    /* ===========================
+RESPONSIVIDADE
+=========================== */
 
+@media (max-width: 768px){
 
-  .capa {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-      min-height:100vh;
-    width: 100%;
-  }
+    .barra-topo{
 
-  .hero img,
-  .capa img {
-    width: 100%;
-    height: 100vh;
-    object-fit: contain;
-  }
+        height:70px;
 
-  .titulo,
-  .texto-capa {
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    width: auto;
-  }
+        padding:0 15px;
 
-  .projeto,
-  .escola,
-  .logo {
-    display: none;
-  }
-
-}
- @media (max-width: 768px) {
-
- header{
-        background-image: url("https://i.ibb.co/fVThCFj8/file-000000007ed4720e9f9f3602dc34a3d6.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
-}
+    .titulo-topo{
 
-header h1 {
-    font-size: 32px;
-    line-height: 1.1;
-}
+        margin-left:45px;
 
-header p {
-    font-size: 16px;
-}
-
-  header img {
-    width: 70px;
-    height: auto;
-  }
-
-
-  /* Capa */
-  .hero,
-  .banner,
-  .inicio {
-    min-height: 100vh;
-    height: 100vh;
- 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-
-  /* Texto da capa */
-  .hero h1,
-  .banner h1 {
-    font-size: 36px;
-    line-height: 1.1;
-    text-align: center;
-  }
-
-  .hero p,
-  .banner p {
-    font-size: 28px;
-    padding: 0 20px;
-    text-align: center;
-    
-  }
-.btn-explorar {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 16px 48px;
-    background: #8b5e3c;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 18px;
-    border: none;
-    transition: 0.3s ease;
-}
-
-.btn-explorar:hover {
-    background: #9f6b45;
-}
-.btn-explorar:hover {
-    background: #a06b45;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-    @media (max-width: 768px) {
-
-    .capa{
-        width: 90%;
-        padding: 20px;
     }
 
-    .capa h1{
-        font-size: 2rem;
+    .titulo-topo h1{
+
+        font-size:1.25rem;
+
     }
 
-    .capa p{
-        font-size: 1rem;
+    .titulo-topo p{
+
+        font-size:.75rem;
+
+    }
+
+    .logo-escola{
+
+        height:42px;
+
+    }
+
+    .menu-btn{
+
+        top:12px;
+
+        left:10px;
+
+        font-size:24px;
+
+        padding:8px 12px;
+
     }
 
     header{
-        background-position: center;
+
+        min-height:100vh;
+
+        padding-top:70px;
+
+        padding-left:15px;
+
+        padding-right:15px;
+
+        background-position:center;
+
+        background-size:cover;
+
+    }
+
+    .capa{
+
+        width:100%;
+
+        padding:25px 18px;
+
+        border-radius:12px;
+
+    }
+
+    .capa h1{
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        margin-bottom:15px;
+
+    }
+
+    .capa p{
+
+        font-size:1rem;
+
+        line-height:1.6;
+
+    }
+
+    .btn-explorar{
+
+        width:100%;
+
+        padding:15px;
+
+        font-size:18px;
+
+    }
+
+    section{
+
+        padding:50px 7%;
+
+    }
+
+    .galeria img{
+
+        width:100%;
+
+        height:auto;
+
     }
 
 }
-</style>
+
+/* Linha azul */
+
+.linha-dossie{
+
+    height:6px;
+
+    background:#1f3a5f;
+
+    border:none;
+
+}
+    </style>
 </head>
+
 <body>
+
 <div class="barra-topo">
 
     <div class="titulo-topo">
@@ -332,146 +466,217 @@ header p {
         <p>Projeto Colégio São Francisco de Assis</p>
     </div>
 
-    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kbS85k6ZmDGdGmTYvuNBTjTk3zJyIF6S7O48cn3DhUgCI=s900-c-k-c0x00ffffff-no-rj" alt="Logo da escola" class="logo-escola">
+    <img
+    class="logo-escola"
+    src="https://yt3.googleusercontent.com/ytc/AIdro_kbS85k6ZmDGdGmTYvuNBTjTk3zJyIF6S7O48cn3DhUgCI=s900-c-k-c0x00ffffff-no-rj"
+    alt="Logo da escola">
 
 </div>
+
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <nav class="menu" id="menu">
+
 <a href="#introducao">Introdução</a>
-<a href="#Grupo 1- População, Território e Diversidade.">Grupo 1- População, Território e Diversidade.</a>
-<a href="#Grupo 2- Educação, Tecnologia e Juventude.">Grupo 2- Educação, Tecnologia e Juventude.</a>
-<a href="#Grupo 3- Economia, Trabalho e Qualidade de Vida.">Grupo 3- Economia, Trabalho e Qualidade de Vida.</a>
-<a href="#Grupo 4- Cultura, Identidade e Presença em São Paulo.">Grupo 4- Cultura, Identidade e Presença em São Paulo.</a>
-<a href="#Grupo 5- Direitos, Politicas e Meio Ambiente.">Grupo 5- Direitos, Politicas e Meio Ambiente.</a>
+
+<a href="#grupo1">Grupo 1 - População, Território e Diversidade</a>
+
+<a href="#grupo2">Grupo 2 - Educação, Tecnologia e Juventude</a>
+
+<a href="#grupo3">Grupo 3 - Economia, Trabalho e Qualidade de Vida</a>
+
+<a href="#grupo4">Grupo 4 - Cultura, Identidade e Presença em São Paulo</a>
+
+<a href="#grupo5">Grupo 5 - Direitos, Políticas e Meio Ambiente</a>
+
 <a href="#conclusao">Conclusão</a>
+
 </nav>
 
 <header>
 
-    
-    <div class="capa">
-        <h1>Dossiê dos Povos Indígenas</h1>
-        <p>História, cultura, diversidade e importância dos povos originários do Brasil.</p>
-        <a href="#introducao" class="btn-explorar">
-        Explorar Dossiê
-    </a>
+<div class="capa">
+
+<h1>Dossiê dos Povos Indígenas</h1>
+
+<p>
+
+História, cultura, diversidade e importância dos povos originários do Brasil.
+
+</p>
+
+<a class="btn-explorar" href="#introducao">
+
+Explorar Dossiê
+
+</a>
+
 </div>
-    </div>
 
 </header>
+
 <hr class="linha-dossie">
-    <selection>
+
 <section id="introducao">
+
 <h2>Introdução</h2>
 
 <div class="info-box">
+
 Os povos indígenas são os habitantes originários do território brasileiro. Atualmente existem centenas de povos com diferentes culturas, línguas, tradições e formas de organização social.
+
 </div>
 
 <p>
+
 A presença indígena no Brasil antecede a chegada dos europeus em milhares de anos. Esses povos desenvolveram conhecimentos sobre a natureza, agricultura, medicina tradicional e preservação ambiental.
+
 </p>
+
 </section>
 
-<section id="Grupo 1- População, Território e Diversidade.">
-<h2>Grupo 1- População, Território e Diversidade.</h2>
+<section id="grupo1">
+
+<h2>Grupo 1 - População, Território e Diversidade</h2>
 
 <p>
+
 Antes da colonização portuguesa, milhões de indígenas habitavam o território brasileiro. A chegada dos colonizadores provocou conflitos, epidemias e perda de territórios.
+
 </p>
 
 <p>
+
 Apesar das dificuldades enfrentadas ao longo dos séculos, os povos indígenas resistiram e continuam preservando suas identidades culturais.
+
 </p>
+
 </section>
 
-<section id="Grupo 2- Educação, Tecnologia e Juventude.">
-<h2>Grupo 2- Educação, Tecnologia e Juventude.</h2>
+<section id="grupo2">
+
+<h2>Grupo 2 - Educação, Tecnologia e Juventude</h2>
 
 <p>
+
 A cultura indígena é marcada pela diversidade. Cada povo possui costumes próprios, línguas, rituais, pinturas corporais, artesanato, danças e formas de organização social.
+
 </p>
+
 </section>
-        
-<section id="Grupo 3- Economia, Trabalho e Qualidade de Vida.">
-<h2>Grupo 3- Economia, Trabalho e Qualidade de Vida.</h2>
+
+<section id="grupo3">
+
+<h2>Grupo 3 - Economia, Trabalho e Qualidade de Vida</h2>
+
 <p>
-informações grupo 3
+
+Informações do grupo 3.
+
 </p>
+
 </section>
-        
-<section id="Grupo 4- Cultura, Identidade e Presença em São Paulo.">
-<h2>Grupo 4- Cultura, Identidade e Presença em São Paulo.</h2>
+<section id="grupo4">
+
+<h2>Grupo 4 - Cultura, Identidade e Presença em São Paulo</h2>
+
 <p>
 Apesar das dificuldades enfrentadas ao longo dos séculos, os povos indígenas resistiram e continuam preservando suas identidades culturais.
 </p>
-    
-</section>
-        <section id="Grupo 5- Direitos, Politicas e Meio Ambiente.">
-<h2>Grupo 5- Direitos, Politicas e Meio Ambiente.</h2>
 
+</section>
+
+<section id="grupo5">
+
+<h2>Grupo 5 - Direitos, Políticas e Meio Ambiente</h2>
 
 <p>
-informações grupo 5.
+Informações do grupo 5.
 </p>
-</section>
 
+</section>
 
 <div class="galeria">
-<img src="https://images.educamaisbrasil.com.br/content/noticias/10-curiosidades-fascinantes-sobre-povos-indigenas-no-mundo_g.jpg">
-<img src="https://recreio.com.br/wp-content/uploads/2025/04/gettyimages-493336669-capa.jpg">
-<img src="https://blog.123milhas.com/wp-content/uploads/2023/02/Dia-Nacional-de-Luta-dos-Povos-Indigenas-conexao123-scaled.jpg">
+
+<img src="https://images.educamaisbrasil.com.br/content/noticias/10-curiosidades-fascinantes-sobre-povos-indigenas-no-mundo_g.jpg" alt="Povos indígenas">
+
+<img src="https://recreio.com.br/wp-content/uploads/2025/04/gettyimages-493336669-capa.jpg" alt="Povos indígenas">
+
+<img src="https://blog.123milhas.com/wp-content/uploads/2023/02/Dia-Nacional-de-Luta-dos-Povos-Indigenas-conexao123-scaled.jpg" alt="Povos indígenas">
+
 </div>
-</section>
 
 <section id="povos">
-<h2>povos</h2>
+
+<h2>Povos</h2>
 
 <div class="info-box">
+
 <ul>
+
 <li>Guarani</li>
 <li>Yanomami</li>
 <li>Tikuna</li>
 <li>Kayapó</li>
 <li>Xavante</li>
 <li>Munduruku</li>
+
 </ul>
+
 </div>
 
 <p>
+
 Esses povos vivem em diferentes regiões do país e possuem características culturais próprias.
+
 </p>
+
 </section>
 
 <section id="direitos">
+
 <h2>Direitos dos Povos Indígenas</h2>
 
 <p>
+
 A Constituição Federal de 1988 reconhece os direitos dos povos indígenas às suas terras, culturas, línguas e tradições.
+
 </p>
 
 <p>
+
 A preservação desses direitos é fundamental para garantir a sobrevivência física e cultural das comunidades indígenas.
+
 </p>
+
 </section>
 
 <section id="conclusao">
+
 <h2>Conclusão</h2>
 
 <p>
+
 Os povos indígenas desempenham papel essencial na preservação ambiental e na diversidade cultural brasileira. Conhecer sua história e respeitar seus direitos é fundamental para a construção de uma sociedade mais justa e consciente.
+
 </p>
+
 </section>
 
 <footer>
+
 Dossiê dos Povos Indígenas • Projeto Escolar
+
 </footer>
 
 <script>
+
 function toggleMenu(){
+
 document.getElementById("menu").classList.toggle("active");
+
 }
+
 </script>
 
 </body>
