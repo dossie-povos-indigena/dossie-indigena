@@ -507,6 +507,31 @@ RESPONSIVIDADE
     height: auto;
     margin: 20px 0;
 }
+    .imagens-saneamento {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.imagens-saneamento img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .imagens-saneamento {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .imagens-saneamento img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
     </style>
 </head>
 
